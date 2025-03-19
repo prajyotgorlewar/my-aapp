@@ -113,7 +113,7 @@ function Soldier3({ position, animationIndex }) {
 function App() {
   return (
     <div className="canvas-container" >
-      <Canvas camera={{ position: [0, 3, 20], fov: 60 }} shadows >
+      <Canvas camera={{ position: [0, 1.5, -4], fov: 60 }} shadows >
         <ambientLight intensity={1.4} />
         <directionalLight
           position={[0, 10, -10]}
