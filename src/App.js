@@ -4,7 +4,6 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-
 function Soldier1({ position, animationIndex }) {
   const { scene, animations } = useGLTF("/Soldier1.glb");
   const mixer = useRef(null);
@@ -18,7 +17,6 @@ function Soldier1({ position, animationIndex }) {
       const action = mixer.current.clipAction(animations[animationIndex]);
       action.play();
     }
-
     scene.traverse((child) => {
       if (child.isMesh) {
         child.castShadow = true;
@@ -36,7 +34,6 @@ function Soldier1({ position, animationIndex }) {
       mixer.current.update(delta);
     }
   });
-
   return <primitive object={scene} position={position} castShadow receiveShadow />;
 }
 
